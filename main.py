@@ -45,6 +45,10 @@ while tl > 0:
     pointer+=1
     tl-=1
 
-os.system(f"git remote add origin {repo_link}")
+# Check if 'origin' already exists
+origin_check = os.popen("git remote").read().split()
+if "origin" not in origin_check:
+    os.system(f"git remote add origin {repo_link}")
+
 os.system("git branch -M master")
 os.system("git push -u origin master -f")

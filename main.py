@@ -46,5 +46,5 @@ while tl > 0:
     tl-=1
 
 os.system(f"git remote add origin {repo_link}")
-os.system("git branch -M main")
-os.system("git push -u origin main -f")
+os.system("git branch -M master")
+os.system("git push -u origin master -f")
